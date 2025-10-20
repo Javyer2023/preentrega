@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './components/Header.jsx'
-import MainComponente from './components/MainComponente.jsx'
+import Productos from './components/Productos.jsx'
 import Footer from './components/Footer.jsx'
+import { ProductosProvider } from './context/ProductosContext.jsx'
+
 
 function App() {
   
@@ -10,7 +12,11 @@ function App() {
   return (
     <>
       <Header/>
-      <MainComponente/>
+      
+      <ProductosProvider>
+        <Productos/>
+      </ProductosProvider>
+      
       <Footer/>
     </>
   )
