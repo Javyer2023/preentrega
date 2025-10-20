@@ -4,7 +4,8 @@ import Header from './components/Header.jsx'
 import Productos from './components/Productos.jsx'
 import Footer from './components/Footer.jsx'
 import {Routes, Route} from 'react-router-dom';
-import Carrito from './components/Carrito.jsx'
+import Carrito from './components/Carrito.jsx';
+import ProductoDetalle from './components/ProductoDetalle.jsx';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Productos/>}/>
         <Route path='/carrito' element={<Carrito/>}/>
+        <Route path="/productos/:id" element={<ProductoDetalle />} />
       </Routes>
       <Footer/>
     </>

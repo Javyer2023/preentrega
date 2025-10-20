@@ -14,10 +14,10 @@ export function CarritoProvider({children}){
     setCarrito([]);
   };
 
-  const eliminarProducto = (id) => {
-    const carritoProdEliminado = carrito.filter(id => carrito.id !== id);
-    setCarrito(carritoProdEliminado);
-  }
+  const eliminarProducto = (indexAEliminar) => {
+  const carritoProdEliminado = carrito.filter((_, i) => i !== indexAEliminar);
+  setCarrito(carritoProdEliminado);
+};
 
   return (
     <CarritoContext.Provider value={{

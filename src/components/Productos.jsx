@@ -4,7 +4,7 @@ import  {useEffect, useState, useContext} from 'react';
 import { ProductosContext } from '../context/ProductosContext.jsx';
 
 const Productos = () => {
-  const {setProductos} = useContext(ProductosContext); 
+  const {productos, setProductos} = useContext(ProductosContext); 
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
 
@@ -21,6 +21,7 @@ const Productos = () => {
     });
     
   },[]);
+  
 
   if(cargando) return <p>Cargando productos....</p>
   
