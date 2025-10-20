@@ -3,7 +3,8 @@ import './App.css'
 import Header from './components/Header.jsx'
 import Productos from './components/Productos.jsx'
 import Footer from './components/Footer.jsx'
-import { ProductosProvider } from './context/ProductosContext.jsx'
+import {Routes, Route} from 'react-router-dom';
+import Carrito from './components/Carrito.jsx'
 
 
 function App() {
@@ -12,11 +13,10 @@ function App() {
   return (
     <>
       <Header/>
-      
-      <ProductosProvider>
-        <Productos/>
-      </ProductosProvider>
-      
+      <Routes>
+        <Route path='/' element={<Productos/>}/>
+        <Route path='/carrito' element={<Carrito/>}/>
+      </Routes>
       <Footer/>
     </>
   )
