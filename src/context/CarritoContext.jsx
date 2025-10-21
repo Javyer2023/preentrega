@@ -14,18 +14,18 @@ export function CarritoProvider({children}){
     setCarrito([]);
   };
 
-  const eliminarProducto = (indexAEliminar) => {
-  const carritoProdEliminado = carrito.filter((_, i) => i !== indexAEliminar);
+  const eliminarProducto = (indexEliminar) => {
+  const carritoProdEliminado = carrito.filter((_, i) => i !== indexEliminar);
   setCarrito(carritoProdEliminado);
 };
 
   return (
     <CarritoContext.Provider value={{
-                carrito,
-                agregarAlCarrito,
-                vaciarCarrito,
-                eliminarProducto}}>
-    {children}
+           carrito,
+           agregarAlCarrito,
+           vaciarCarrito,
+           eliminarProducto}}>
+          {children}
     </CarritoContext.Provider>
   );
 }

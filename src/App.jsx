@@ -6,6 +6,8 @@ import Footer from './components/Footer.jsx'
 import {Routes, Route} from 'react-router-dom';
 import Carrito from './components/Carrito.jsx';
 import ProductoDetalle from './components/ProductoDetalle.jsx';
+import Ofertas from './components/Ofertas.jsx'
+import Contacto from './components/Contacto.jsx'
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
         <Route path='/' element={<Productos/>}/>
         <Route path='/carrito' element={<Carrito/>}/>
         <Route path="/productos/:id" element={<ProductoDetalle />} />
+        <Route path='/ofertas' element={<Ofertas/>} />
+        <Route path='/contacto' element={<Contacto/>} />
       </Routes>
       <Footer/>
     </>

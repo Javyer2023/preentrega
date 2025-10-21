@@ -6,8 +6,8 @@ const Navbar = () => {
     <div className={styles.navcontainer}>
         <ul>
             <li><Link to={'/'}>Inicio</Link></li>
-            <li><a href="">Ofertas</a></li>
-            <li><a href="">Contacto</a></li>
+            <li><Link to={'/ofertas'}>Ofertas</Link></li>
+            <li><Link to={'/contacto'}>Contacto</Link></li>
             <li><Link to={'/carrito'}><img src={iconocart} alt="" /></Link></li>
         </ul>
       
