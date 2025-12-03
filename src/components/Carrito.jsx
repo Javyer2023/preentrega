@@ -14,10 +14,9 @@ const Carrito = () => {
         {carrito.map((item, index) => (
           <li key={index}>
             <div className={styles.card}>
-              <h4>{item.title}</h4>
-              <p><span>Categoría:</span> {item.category}</p>
-              <p className={styles.price}><span>Precio:</span> {item.price} $</p>
-              <img src={item.image} alt={item.title} />
+              <h4>{item.nombre}</h4>
+              <p className={styles.price}><span>Precio:</span> {item.precio} $</p>
+              <img src={item.imagen} alt={item.imagen} />
               <button onClick={() => eliminarProducto(index)}>Eliminar</button>
               
             </div>

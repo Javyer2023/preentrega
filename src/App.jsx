@@ -8,19 +8,26 @@ import Carrito from './components/Carrito.jsx';
 import ProductoDetalle from './components/ProductoDetalle.jsx';
 import Ofertas from './components/Ofertas.jsx'
 import Contacto from './components/Contacto.jsx'
+import Login from './components/Login.jsx'
+import Admin from './components/Admin.jsx'
+import RutaProtegida from './components/RutaProtegida.jsx'
+import { useAuthContext } from './context/AuthContext.jsx'
 
 
 function App() {
-  
-
+  const {user} = useAuthContext();
+  console.log("👉 Usuario desde el contexto:", user); 
+  const estaAutenticado = Boolean(user);
   return (
     <>
-      <Header/>
+      <Header estaAutenticado = {estaAutenticado}/>
       <Routes>
         <Route path='/' element={<Productos/>}/>
-        <Route path='/carrito' element={<Carrito/>}/>
+        <Route path='/carrito' element={<RutaProtegida estaAutenticado={estaAutenticado}><Carrito/></RutaProtegida>}/>
         <Route path="/productos/:id" element={<ProductoDetalle />} />
         <Route path='/ofertas' element={<Ofertas/>} />
+        <Route path="/login" element = {<Login/>} />
+        <Route path='/admin' element = {<RutaProtegida estaAutenticado={estaAutenticado}> <Admin/> </RutaProtegida>} />
         <Route path='/contacto' element={<Contacto/>} />
       </Routes>
       <Footer/>

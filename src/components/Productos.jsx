@@ -9,7 +9,7 @@ const Productos = () => {
   const [error, setError] = useState(null);
 
   useEffect (()=> {
-    fetch('https://fakestoreapi.com/products')
+    fetch('https://692bd52fc829d464006dbff9.mockapi.io/producto')
     .then(response => response.json())
     .then((data) => {
       setProductos(data);

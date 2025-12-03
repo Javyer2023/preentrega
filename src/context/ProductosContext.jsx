@@ -9,7 +9,7 @@ export function ProductosProvider({children}){
   
   return (
     <ProductosContext.Provider value={{productos,setProductos}}>
-    {children}
+     {children}
     </ProductosContext.Provider>
   );
 }

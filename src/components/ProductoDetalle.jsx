@@ -7,7 +7,7 @@ const ProductoDetalle = () => {
   const [productoEncontrado, setProductoEncontrado] = useState(null);
 
   useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/${id}`)
+    fetch(`https://692bd52fc829d464006dbff9.mockapi.io/producto/${id}`)
       .then(res => res.json())
       .then(data => setProductoEncontrado(data))
       .catch(err => console.error('Error al cargar producto:', err));
@@ -19,11 +19,10 @@ const ProductoDetalle = () => {
 
   return (
     <div className={styles.card}>
-      <h4>{productoEncontrado.title}</h4>
-      <p><span>Categoría:</span> {productoEncontrado.category}</p>
-      <p><span>Detalle:</span> {productoEncontrado.description}</p>
-      <p className={styles.price}><span>Precio:</span> {productoEncontrado.price} $</p>
-      <img src={productoEncontrado.image} alt={productoEncontrado.title} />
+      <h4>{productoEncontrado.nombre}</h4>
+      <p><span>Detalle:</span> {productoEncontrado.descripcion}</p>
+      <p className={styles.price}><span>Precio:</span> {productoEncontrado.precio} $</p>
+      <img src={productoEncontrado.imagen} alt={productoEncontrado.imagen} />
     </div>
   );
 };

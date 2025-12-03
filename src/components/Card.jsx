@@ -14,9 +14,9 @@ const Card = () => {
             <div className={styles.card}>
 
               <h4>{item.title}</h4>
-              <p><span>Categoría:</span>{item.category}</p>
-              <p className={styles.price}><span>Precio:</span>{item.price} $ </p>
-              <img src= {item.image} alt={item.image} />
+              <p><span>Nombre:</span>{item.nombre}</p>
+              <p className={styles.price}><span>Precio:</span>{item.precio} $ </p>
+              <img src= {item.imagen} alt={item.imagen} />
               <Link to={`/productos/${item.id}`}>Ver Detalle</Link>
               <button onClick={()=>agregarAlCarrito(item)}>Agregar al Carrito</button>
               

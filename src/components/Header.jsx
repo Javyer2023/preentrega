@@ -1,10 +1,10 @@
 import Navbar from "./Navbar.jsx"
 
-const Header = () => {
+const Header = ({estaAutenticado}) => {
   return (
     <div>
         <h1>Tienda de Productos</h1>
-      <Navbar/>
+      <Navbar estaAutenticado={estaAutenticado}/>
     </div>
   )
 }
