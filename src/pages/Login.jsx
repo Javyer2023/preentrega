@@ -6,19 +6,25 @@ function Login() {
   const [password, setPassword] = useState('');
   const { login } = useAuthContext();
   const navigate = useNavigate();
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
     
     if (usuario === 'admin' && password === 'abcd') {
-      console.log(usuario);
-      console.log(password);
       login(usuario);
       console.log('Login Exitoso!');
       navigate('/admin');
+    } else if(usuario === 'user' && password === '1234'){
+        login(usuario);
+        console.log('User logueado correctamente');
+        navigate('/');
+      
     } else {
-      alert('Credenciales incorrectas');
+        alert('Credenciales incorrectas');
     }
+
+
   };
 
   return (
@@ -42,7 +48,7 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <button type="submit">Iniciar sesión</button>
+      <button type="submit">Aceptar</button>
     </form>);
 }
 export default Login;
