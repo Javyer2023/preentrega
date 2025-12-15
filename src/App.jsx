@@ -16,7 +16,6 @@ import { useAuthContext } from './context/AuthContext.jsx'
 
 function App() {
   const {user} = useAuthContext();
-  console.log("👉 Usuario desde el contexto:", user); 
   const estaAutenticado = Boolean(user);
   return (
     <>

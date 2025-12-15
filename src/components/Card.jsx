@@ -19,7 +19,7 @@ const Card = () => {
             <div className={styles.card}>
 
               <h4>{item.title}</h4>
-              <p><span>Nombre:</span>{item.nombre}</p>
+              <h5>{item.nombre}</h5>
               <p className={styles.price}><span>Precio:</span>{item.precio} $ </p>
               <img src= {item.imagen} alt={item.imagen} />
               <Link to={`/productos/${item.id}`}>Ver Detalle</Link>

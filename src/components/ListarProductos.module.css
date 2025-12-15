@@ -1,0 +1,62 @@
+.contenedor {
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.card {
+  display: flex;
+  /*flex-direction: column;*/
+  gap:15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  width: 40%;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 50%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.card h4 {
+  font-size: 1rem;
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-size: 1.2rem;
+  color: #333;
+  width:200px;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card .price {
+  font-weight: bolder ;
+  font-size:medium;
+  background-color: darkred;
+  color:#fff;
+}
+
+.contenedor .botones {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content:space-around;
+     
+}
+

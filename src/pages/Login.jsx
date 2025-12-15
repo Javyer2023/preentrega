@@ -36,6 +36,7 @@ function Login() {
           id="user"
           type="text"
           value={usuario}
+          placeholder='admin o user'
           onChange={(e) => setUsuario(e.target.value)}
         />
       </div>
@@ -44,6 +45,7 @@ function Login() {
         <input
           id="contrasenia"
           type="password"
+          placeholder='abcd o 1234'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
